@@ -1,14 +1,77 @@
 h1, h2, h3 {
-     line-height: 1.2;
+     line-height: .5;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #fff;
+}
+header {
+	padding: 5px 0;
 }
 li {
-    display: inline;
+    float: left;
+	border-right: 1px solid #bbb;
+}
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 10px 5px;
+    text-decoration: none;
+}
+li:last-child {
+    border-right: none;
+}
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #D3D3D3;
 }
 body {
     margin: 40px auto;
     max-width: 800px;
     line-height: 1.6;
     font-size: 18px;
-    color: #444;
-    padding: 0 10px;
+    color: #000;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #D3D3D3;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #D3D3D3;
+}
+
+.main {
+    margin-right: 100px; /* Same as the width of the sidenav */
+    font-size: 20px; /* Increased text to enable scrolling */
+    padding: 10px 0px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
 }
